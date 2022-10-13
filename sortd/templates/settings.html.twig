@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+	{{ attach_library('sortd/settings-css') }}
+</head>
+<body>
+    <div class="content-section">
+	<div class="container-pj">
+	   <div class="row">
+	      <div class="col-md-12">
+	         <div class="heading-main">
+	            <div class="logoLft">
+	               <img src="/modules/sortd/assets/icons/logo.png">
+	              <h5>Settings</h5>
+	            </div>
+	            <div class="headingNameTop df_bTn">
+	               <a href="#"><button class="butn-df">Go To Console  <i class="bi bi-box-arrow-up-right"></i></button></a>
+	            </div>
+	         </div>
+	      </div>
+	   </div>
+
+	   <div class="row">
+	   		<div class="col-md-12">
+	   			<div class="designSeting">
+	   				<span>
+	   					<i class="bi bi-palette"></i>
+	   				</span>
+	   				<div class="ddBox">
+		   				<h1>Design and Develop</h1>
+		   				<p>Customise your entire mobile web user interface and functionalities. Engage your end users with best in class mobile experience.</p>
+		   			</div>
+		   			<div class="mngBtns">
+		   				<a href="<?php echo wp_kses_data(admin_url()).'admin.php?page=sortd-manage-settings&section=sortd_config&parameter=general_settings';?>">
+			   				<button class="butn-df btn-md">Manage Design  <i class="bi bi-arrow-right-circle-fill"></i>
+			   					
+			   				</button>
+		   				</a>
+		   				<a href="<?php echo wp_kses_data(admin_url()).'admin.php?page=sortd-manage-settings&section=sortd_manage_templates';?>">
+		   				<button class="butn-df btn-Thm">Themes <i class="bi bi-arrow-right-circle-fill"></i></button></a>
+		   			</div>
+	   			</div>
+	   		</div>
+
+	   		<div class="col-md-6">
+	   			<div class="designCatag_oder">
+	   				<h3>Manage Categories</h3>
+	   				<p>Manage sync / unsync of the categories in mobile.</p>
+	   				<span>
+	   					<a href="<?php echo wp_kses_data(admin_url()).'admin.php?page=sortd-manage-settings&section=sortd_manage_categories';?>"><i class="bi bi-arrow-right-circle-fill"></i></a>
+	   				</span>
+	   			</div>
+
+	   			<div class="designCatag_oder">
+	   				<h3>Credentials <span class="verifyAlt">Already Verified</span></h3>
+	   				<p>Validate your unique token & key to keep your account secure.</p>
+	   				<span>
+	   					<a href="/apiAuth"><i class="bi bi-arrow-right-circle-fill"></i></a>
+	   				</span>
+	   			</div>
+
+	   			<div class="designCatag_oder">
+					   <h3> Set Mobile Search Console  </h3>
+					   <p> Create search visibilty for advanced mobile setup. </p>
+					   <span>
+					   <a target="_blank" href="https://search.google.com/search-console/about"><i class="bi bi-arrow-right-circle-fill"></i></a>
+					   </span>
+				   </div>
+
+				<div class="designCatag_oder authorsSettings">
+	   				<h3>Manage Authors</h3>
+	   				<p>Sync old authors data.</p>
+	   				<span>
+					   <span class="dataSuccess"></span>
+					    <span class="dataloader" style="display:none" >
+                        <span class="">Please Wait...</span>
+                        <img width="35px" src="<?php echo wp_kses_data(SORTD_CSS_URL);?>/load.gif" id="loader">
+						</span> 
+	   					<a href="javascript:void(0)" class="manageAuthors"><i class="bi bi-arrow-right-circle-fill"></i></a>
+	   				</span>
+	   			</div>
+				<?php } ?>
+
+	   		</div>
+	   		
+	   		<div class="col-md-6">
+	   			<div class="designCatag_oder">
+	   				<h3>Mobile Subdomain Status</h3>
+	   				<p style="width:44%;">Control your website redirection to mobile urls. </p>
+	   				<a href="<?php echo wp_kses_data(admin_url()).'admin.php?page=sortd-manage-settings&section=sortd_redirection';?>" class="<?php echo wp_kses_data($class_name);?>"><?php echo wp_kses_data($status_btn);?></a>
+	   				<hr class="bdr2">
+
+	   				<h4>Mobile Url: </h4> <span class="mobDom"><?php echo wp_kses_data($host);?></span>
+	   				<a href="<?php echo wp_kses_data(admin_url()).'admin.php?page=sortd-manage-settings&section=sortd_manage_domains';?>" class="mngDom" style="margin-top:23px;margin-bottom:12px;">Manage Mobile Domain <i class="bi bi-arrow-right-circle-fill"></i></a>
+					   
+				</div>
+				<div class="designCatag_oder">
+	   				<h3>Manage Advanced Settings</h3>
+	   				<p>Click here to manage your extended feature settings.</p>
+	   				<span>
+	   					<a target="_blank" href="<?php echo wp_kses_data($console_url);?>/features/manager?project=<?php echo wp_kses_data($project_slug);?>"><i class="bi bi-arrow-right-circle-fill"></i></a>
+	   				</span>
+	   			</div>
+	   		</div>
+		
+	   </div>
+	</div>
+</div>
+</body>
+</html>
