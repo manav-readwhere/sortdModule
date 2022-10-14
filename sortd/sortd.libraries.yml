@@ -1,5 +1,0 @@
-settings-css:
-  version: "1.0.x"
-  css:
-    component:
-      assets/css/admin-settings.css: {}
