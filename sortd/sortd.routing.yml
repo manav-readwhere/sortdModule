@@ -1,0 +1,30 @@
+sortd.form:
+  path: '/apiAuth'
+  defaults:
+    _form: '\Drupal\sortd\Form\ApiCrud'
+    _title: 'API_Authentication'
+  requirements:
+    _permission: 'access content'
+
+sortd.controller:
+  path: '/dashboard'
+  defaults:
+    #_form: '\Drupal\sortd\Form\Dashboard'
+    _controller: '\Drupal\sortd\Controller\SortdController::sortdPlans'
+    _title: 'Dashboard'
+  requirements:
+    _permission: 'access content'
+
+sortd.settings:
+  path: '/settings'
+  defaults:
+    _controller: '\Drupal\sortd\Controller\SortdController::settings'
+  requirements:
+    _permission: 'access content'
+
+sortd.getHelp:
+  path: '/help'
+  defaults:
+    _controller: '\Drupal\sortd\Controller\SortdController::get_help'
+  requirements:
+    _permission: 'access content'
